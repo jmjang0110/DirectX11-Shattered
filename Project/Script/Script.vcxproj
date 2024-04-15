@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{1fb2cdd5-204f-4c23-8b65-f179c5b4e3b3}</ProjectGuid>
+    <RootNamespace>Script</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <EnableUnitySupport>false</EnableUnitySupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <EnableUnitySupport>false</EnableUnitySupport>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)External\Include\;$(SolutionDir)External\Include\FBXLoader\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)External\Library\;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)External\Library\Script\</OutDir>
+    <TargetName>Script_debug</TargetName>
+    <IntDir>$(SolutionDir)Trash\$(ProjectName)\$(Configuration)\</IntDir>
+    <ExternalIncludePath>$(SolutionDir)External\Include\DirectXTex\;$(SolutionDir)External\Include\spdlog\;$(SolutionDir)External\Include\FBXLoader\;</ExternalIncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir)External\Include\;$(SolutionDir)External\Include\FBXLoader\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)External\Library\;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)External\Library\Script\</OutDir>
+    <IntDir>$(SolutionDir)Trash\$(ProjectName)\$(Configuration)\</IntDir>
+    <ExternalIncludePath>$(SolutionDir)External\Include\DirectXTex\;$(SolutionDir)External\Include\FBXLoader\;</ExternalIncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ExternalWarningLevel>InheritWarningLevel</ExternalWarningLevel>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DisableAnalyzeExternal>true</DisableAnalyzeExternal>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>cd $(SolutionDir)
+call ScriptCopy.bat
+cd $(SolutionDir)OutputFile\bin_debug\
+call CodeGen.exe</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ExternalWarningLevel>InheritWarningLevel</ExternalWarningLevel>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DisableAnalyzeExternal>true</DisableAnalyzeExternal>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>cd $(SolutionDir)
+call ScriptCopy.bat
+cd $(SolutionDir)OutputFile\bin_debug\
+call CodeGen.exe</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="BossDefine.h" />
+    <ClInclude Include="BossJugCombatMgrScript.h" />
+    <ClInclude Include="BossJugHandScript.h" />
+    <ClInclude Include="BossJugScript.h" />
+    <ClInclude Include="CameraMoveScript.h" />
+    <ClInclude Include="CameraShakeScript.h" />
+    <ClInclude Include="CatmullRomSpline.h" />
+    <ClInclude Include="CAttack_Gun.h" />
+    <ClInclude Include="CDeath_Gun.h" />
+    <ClInclude Include="CinemaCamScript.h" />
+    <ClInclude Include="CObjectMgrState_CutScene.h" />
+    <ClInclude Include="M_AttackScript.h" />
+    <ClInclude Include="Phase01TriggerScript.h" />
+    <ClInclude Include="PotScript.h" />
+    <ClInclude Include="DoorScript.h" />
+    <ClInclude Include="Deux_Attack.h" />
+    <ClInclude Include="Deux_Die.h" />
+    <ClInclude Include="Deux_Hit.h" />
+    <ClInclude Include="Deux_Idle.h" />
+    <ClInclude Include="Deux_Walk.h" />
+    <ClInclude Include="EffectScript.h" />
+    <ClInclude Include="EnergyBallScript.h" />
+    <ClInclude Include="FieldMonsteScript.h" />
+    <ClInclude Include="FieldM_StateMgr.h" />
+    <ClInclude Include="HammerScript.h" />
+    <ClInclude Include="Homon_Attack.h" />
+    <ClInclude Include="Homon_Die.h" />
+    <ClInclude Include="Homon_Hit.h" />
+    <ClInclude Include="Homon_Idle.h" />
+    <ClInclude Include="Homon_Walk.h" />
+    <ClInclude Include="ItemScript.h" />
+    <ClInclude Include="MainMenuScript.h" />
+    <ClInclude Include="CIdle_Gun.h" />
+    <ClInclude Include="CObjectManager.h" />
+    <ClInclude Include="ColumnFlameScript.h" />
+    <ClInclude Include="CRun_Gun.h" />
+    <ClInclude Include="CStun_Gun.h" />
+    <ClInclude Include="CTranslateMgr.h" />
+    <ClInclude Include="CWalk_Gun.h" />
+    <ClInclude Include="DestroyScript.h" />
+    <ClInclude Include="DeuxiemieDefine.h" />
+    <ClInclude Include="GameDefine.h" />
+    <ClInclude Include="HandStateMgrScript.h" />
+    <ClInclude Include="CPlayerDieState.h" />
+    <ClInclude Include="CPlayerHeavyAttackState.h" />
+    <ClInclude Include="CPlayerHitState.h" />
+    <ClInclude Include="CPlayerIdleState.h" />
+    <ClInclude Include="CPlayerJumpState.h" />
+    <ClInclude Include="CPlayerLightAttackState.h" />
+    <ClInclude Include="CPlayerMoveState.h" />
+    <ClInclude Include="CPlayerParryState.h" />
+    <ClInclude Include="CPlayerSprintState.h" />
+    <ClInclude Include="CPlayerStat.h" />
+    <ClInclude Include="JugHand_Attack.h" />
+    <ClInclude Include="JugHand_Gen.h" />
+    <ClInclude Include="JugHand_Idle.h" />
+    <ClInclude Include="JugHand_None.h" />
+    <ClInclude Include="JugHand_Vanish.h" />
+    <ClInclude Include="JugPhase_1.h" />
+    <ClInclude Include="JugPhase_2.h" />
+    <ClInclude Include="JugPhase_Dead.h" />
+    <ClInclude Include="JugPhase_Intro.h" />
+    <ClInclude Include="JugPhase_None.h" />
+    <ClInclude Include="Jug_Attack_0.h" />
+    <ClInclude Include="Jug_Attack_1.h" />
+    <ClInclude Include="Jug_Dead.h" />
+    <ClInclude Include="Jug_Fly.h" />
+    <ClInclude Include="Jug_Hammer_Hit.h" />
+    <ClInclude Include="Jug_Hammer_Idle.h" />
+    <ClInclude Include="Jug_Intro.h" />
+    <ClInclude Include="Jug_None.h" />
+    <ClInclude Include="Jug_Norm_Hit.h" />
+    <ClInclude Include="Jug_Norm_Idle.h" />
+    <ClInclude Include="Jug_SpawnHammer.h" />
+    <ClInclude Include="Jug_WalkGround.h" />
+    <ClInclude Include="MagmaScript.h" />
+    <ClInclude Include="MissileScript.h" />
+    <ClInclude Include="CObjKeyMgr.h" />
+    <ClInclude Include="MonsterGunScript.h" />
+    <ClInclude Include="MonsterSearchScript.h" />
+    <ClInclude Include="MonsterShieldScript.h" />
+    <ClInclude Include="MonsterSwordScript.h" />
+    <ClInclude Include="ObjMgrState_LOADING.h" />
+    <ClInclude Include="ObjMgrState_IDLE.h" />
+    <ClInclude Include="PaperBurnScript.h" />
+    <ClInclude Include="PlayerCamScript.h" />
+    <ClInclude Include="PlayerScript.h" />
+    <ClInclude Include="CSceneSaveLoad.h" />
+    <ClInclude Include="CScriptMgr.h" />
+    <ClInclude Include="CStateMgr.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="SocketColliderScript.h" />
+    <ClInclude Include="SwordTrailScript.h" />
+    <ClInclude Include="TotemScript.h" />
+    <ClInclude Include="TrailScript.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BossJugCombatMgrScript.cpp" />
+    <ClCompile Include="BossJugHandScript.cpp" />
+    <ClCompile Include="BossJugScript.cpp" />
+    <ClCompile Include="CameraMoveScript.cpp" />
+    <ClCompile Include="CameraShakeScript.cpp" />
+    <ClCompile Include="CatmullRomSpline.cpp" />
+    <ClCompile Include="CAttack_Gun.cpp" />
+    <ClCompile Include="CDeath_Gun.cpp" />
+    <ClCompile Include="CinemaCamScript.cpp" />
+    <ClCompile Include="CObjectMgrState_CutScene.cpp" />
+    <ClCompile Include="M_AttackScript.cpp" />
+    <ClCompile Include="Phase01TriggerScript.cpp" />
+    <ClCompile Include="PotScript.cpp" />
+    <ClCompile Include="DoorScript.cpp" />
+    <ClCompile Include="Deux_Attack.cpp" />
+    <ClCompile Include="Deux_Die.cpp" />
+    <ClCompile Include="Deux_Hit.cpp" />
+    <ClCompile Include="Deux_Idle.cpp" />
+    <ClCompile Include="Deux_Walk.cpp" />
+    <ClCompile Include="EffectScript.cpp" />
+    <ClCompile Include="EnergyBallScript.cpp" />
+    <ClCompile Include="FieldMonsteScript.cpp" />
+    <ClCompile Include="FieldM_StateMgr.cpp" />
+    <ClCompile Include="HammerScript.cpp" />
+    <ClCompile Include="Homon_Attack.cpp" />
+    <ClCompile Include="Homon_Die.cpp" />
+    <ClCompile Include="Homon_Hit.cpp" />
+    <ClCompile Include="Homon_Idle.cpp" />
+    <ClCompile Include="Homon_Walk.cpp" />
+    <ClCompile Include="ItemScript.cpp" />
+    <ClCompile Include="MainMenuScript.cpp" />
+    <ClCompile Include="CIdle_Gun.cpp" />
+    <ClCompile Include="CObjectManager.cpp" />
+    <ClCompile Include="ColumnFlameScript.cpp" />
+    <ClCompile Include="CRun_Gun.cpp" />
+    <ClCompile Include="CStun_Gun.cpp" />
+    <ClCompile Include="CTranslateMgr.cpp" />
+    <ClCompile Include="CWalk_Gun.cpp" />
+    <ClCompile Include="DestroyScript.cpp" />
+    <ClCompile Include="HandStateMgrScript.cpp" />
+    <ClCompile Include="CPlayerDieState.cpp" />
+    <ClCompile Include="CPlayerHeavyAttackState.cpp" />
+    <ClCompile Include="CPlayerHitState.cpp" />
+    <ClCompile Include="CPlayerIdleState.cpp" />
+    <ClCompile Include="CPlayerJumpState.cpp" />
+    <ClCompile Include="CPlayerLightAttackState.cpp" />
+    <ClCompile Include="CPlayerMoveState.cpp" />
+    <ClCompile Include="CPlayerParryState.cpp" />
+    <ClCompile Include="CPlayerSprintState.cpp" />
+    <ClCompile Include="CPlayerStat.cpp" />
+    <ClCompile Include="JugHand_Attack.cpp" />
+    <ClCompile Include="JugHand_Gen.cpp" />
+    <ClCompile Include="JugHand_Idle.cpp" />
+    <ClCompile Include="JugHand_None.cpp" />
+    <ClCompile Include="JugHand_Vanish.cpp" />
+    <ClCompile Include="JugPhase_1.cpp" />
+    <ClCompile Include="JugPhase_2.cpp" />
+    <ClCompile Include="JugPhase_Dead.cpp" />
+    <ClCompile Include="JugPhase_Intro.cpp" />
+    <ClCompile Include="JugPhase_None.cpp" />
+    <ClCompile Include="Jug_Attack_0.cpp" />
+    <ClCompile Include="Jug_Attack_1.cpp" />
+    <ClCompile Include="Jug_Dead.cpp" />
+    <ClCompile Include="Jug_Fly.cpp" />
+    <ClCompile Include="Jug_Hammer_Hit.cpp" />
+    <ClCompile Include="Jug_Hammer_Idle.cpp" />
+    <ClCompile Include="Jug_Intro.cpp" />
+    <ClCompile Include="Jug_None.cpp" />
+    <ClCompile Include="Jug_Norm_Hit.cpp" />
+    <ClCompile Include="Jug_Norm_Idle.cpp" />
+    <ClCompile Include="Jug_SpawnHammer.cpp" />
+    <ClCompile Include="Jug_WalkGround.cpp" />
+    <ClCompile Include="MagmaScript.cpp" />
+    <ClCompile Include="MissileScript.cpp" />
+    <ClCompile Include="CObjKeyMgr.cpp" />
+    <ClCompile Include="MonsterGunScript.cpp" />
+    <ClCompile Include="MonsterSearchScript.cpp" />
+    <ClCompile Include="MonsterShieldScript.cpp" />
+    <ClCompile Include="MonsterSwordScript.cpp" />
+    <ClCompile Include="ObjMgrState_LOADING.cpp" />
+    <ClCompile Include="ObjMgrState_IDLE.cpp" />
+    <ClCompile Include="PaperBurnScript.cpp" />
+    <ClCompile Include="PlayerCamScript.cpp" />
+    <ClCompile Include="PlayerScript.cpp" />
+    <ClCompile Include="CSceneSaveLoad.cpp" />
+    <ClCompile Include="CScriptMgr.cpp" />
+    <ClCompile Include="CStateMgr.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="SocketColliderScript.cpp" />
+    <ClCompile Include="SwordTrailScript.cpp" />
+    <ClCompile Include="TotemScript.cpp" />
+    <ClCompile Include="TrailScript.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

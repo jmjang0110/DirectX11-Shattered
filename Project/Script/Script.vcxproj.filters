@@ -1,0 +1,718 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="pch.h">
+      <Filter>Default</Filter>
+    </ClInclude>
+    <ClInclude Include="CStateMgr.h">
+      <Filter>Script\Player\StateMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerScript.h">
+      <Filter>Script\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CObjKeyMgr.h">
+      <Filter>Script\Player\Key</Filter>
+    </ClInclude>
+    <ClInclude Include="BossJugCombatMgrScript.h">
+      <Filter>Script\Boss\Jug\CombatMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="BossJugHandScript.h">
+      <Filter>Script\Boss\Jug\Hand</Filter>
+    </ClInclude>
+    <ClInclude Include="BossJugScript.h">
+      <Filter>Script\Boss\Jug\Jug</Filter>
+    </ClInclude>
+    <ClInclude Include="JugPhase_None.h">
+      <Filter>Script\Boss\Jug\CombatMgr\state</Filter>
+    </ClInclude>
+    <ClInclude Include="JugPhase_Intro.h">
+      <Filter>Script\Boss\Jug\CombatMgr\state</Filter>
+    </ClInclude>
+    <ClInclude Include="JugPhase_1.h">
+      <Filter>Script\Boss\Jug\CombatMgr\state</Filter>
+    </ClInclude>
+    <ClInclude Include="JugPhase_2.h">
+      <Filter>Script\Boss\Jug\CombatMgr\state</Filter>
+    </ClInclude>
+    <ClInclude Include="JugPhase_Dead.h">
+      <Filter>Script\Boss\Jug\CombatMgr\state</Filter>
+    </ClInclude>
+    <ClInclude Include="JugHand_Vanish.h">
+      <Filter>Script\Boss\Jug\Hand\state</Filter>
+    </ClInclude>
+    <ClInclude Include="JugHand_Attack.h">
+      <Filter>Script\Boss\Jug\Hand\state</Filter>
+    </ClInclude>
+    <ClInclude Include="JugHand_Gen.h">
+      <Filter>Script\Boss\Jug\Hand\state</Filter>
+    </ClInclude>
+    <ClInclude Include="JugHand_Idle.h">
+      <Filter>Script\Boss\Jug\Hand\state</Filter>
+    </ClInclude>
+    <ClInclude Include="JugHand_None.h">
+      <Filter>Script\Boss\Jug\Hand\state</Filter>
+    </ClInclude>
+    <ClInclude Include="Jug_WalkGround.h">
+      <Filter>Script\Boss\Jug\Jug\state</Filter>
+    </ClInclude>
+    <ClInclude Include="Jug_Attack_0.h">
+      <Filter>Script\Boss\Jug\Jug\state</Filter>
+    </ClInclude>
+    <ClInclude Include="Jug_Attack_1.h">
+      <Filter>Script\Boss\Jug\Jug\state</Filter>
+    </ClInclude>
+    <ClInclude Include="Jug_Dead.h">
+      <Filter>Script\Boss\Jug\Jug\state</Filter>
+    </ClInclude>
+    <ClInclude Include="Jug_Hammer_Hit.h">
+      <Filter>Script\Boss\Jug\Jug\state</Filter>
+    </ClInclude>
+    <ClInclude Include="Jug_Hammer_Idle.h">
+      <Filter>Script\Boss\Jug\Jug\state</Filter>
+    </ClInclude>
+    <ClInclude Include="Jug_Intro.h">
+      <Filter>Script\Boss\Jug\Jug\state</Filter>
+    </ClInclude>
+    <ClInclude Include="Jug_None.h">
+      <Filter>Script\Boss\Jug\Jug\state</Filter>
+    </ClInclude>
+    <ClInclude Include="Jug_Norm_Hit.h">
+      <Filter>Script\Boss\Jug\Jug\state</Filter>
+    </ClInclude>
+    <ClInclude Include="Jug_Norm_Idle.h">
+      <Filter>Script\Boss\Jug\Jug\state</Filter>
+    </ClInclude>
+    <ClInclude Include="Jug_SpawnHammer.h">
+      <Filter>Script\Boss\Jug\Jug\state</Filter>
+    </ClInclude>
+    <ClInclude Include="CPlayerStat.h">
+      <Filter>Script\Player\Stat</Filter>
+    </ClInclude>
+    <ClInclude Include="CPlayerDieState.h">
+      <Filter>Script\Player\State\Die</Filter>
+    </ClInclude>
+    <ClInclude Include="CPlayerHitState.h">
+      <Filter>Script\Player\State\Hit</Filter>
+    </ClInclude>
+    <ClInclude Include="CPlayerHeavyAttackState.h">
+      <Filter>Script\Player\State\HeavyAttack</Filter>
+    </ClInclude>
+    <ClInclude Include="CPlayerLightAttackState.h">
+      <Filter>Script\Player\State\LightAttack</Filter>
+    </ClInclude>
+    <ClInclude Include="CPlayerJumpState.h">
+      <Filter>Script\Player\State\Jump</Filter>
+    </ClInclude>
+    <ClInclude Include="CPlayerParryState.h">
+      <Filter>Script\Player\State\Parry</Filter>
+    </ClInclude>
+    <ClInclude Include="CPlayerSprintState.h">
+      <Filter>Script\Player\State\Sprint</Filter>
+    </ClInclude>
+    <ClInclude Include="CPlayerIdleState.h">
+      <Filter>Script\Player\State\Idle</Filter>
+    </ClInclude>
+    <ClInclude Include="CPlayerMoveState.h">
+      <Filter>Script\Player\State\Move</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterGunScript.h">
+      <Filter>Script\Monster\Deuxiemie\Gun</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterSwordScript.h">
+      <Filter>Script\Monster\Deuxiemie\Sword</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterShieldScript.h">
+      <Filter>Script\Monster\Deuxiemie\Shield</Filter>
+    </ClInclude>
+    <ClInclude Include="HandStateMgrScript.h">
+      <Filter>Script\Boss\Jug\Hand\HandStateMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="GameDefine.h">
+      <Filter>Default</Filter>
+    </ClInclude>
+    <ClInclude Include="BossDefine.h">
+      <Filter>Script\Boss</Filter>
+    </ClInclude>
+    <ClInclude Include="CTranslateMgr.h">
+      <Filter>Script\Player\TranslateMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="TrailScript.h">
+      <Filter>Script\Effect\Trail</Filter>
+    </ClInclude>
+    <ClInclude Include="DestroyScript.h">
+      <Filter>Script\Effect\Destroy</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterSearchScript.h">
+      <Filter>Script\Monster\Deuxiemie\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="DeuxiemieDefine.h">
+      <Filter>Script\Monster\Deuxiemie\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="CAttack_Gun.h">
+      <Filter>Script\Monster\Deuxiemie\Gun\State</Filter>
+    </ClInclude>
+    <ClInclude Include="CDeath_Gun.h">
+      <Filter>Script\Monster\Deuxiemie\Gun\State</Filter>
+    </ClInclude>
+    <ClInclude Include="CIdle_Gun.h">
+      <Filter>Script\Monster\Deuxiemie\Gun\State</Filter>
+    </ClInclude>
+    <ClInclude Include="CRun_Gun.h">
+      <Filter>Script\Monster\Deuxiemie\Gun\State</Filter>
+    </ClInclude>
+    <ClInclude Include="CStun_Gun.h">
+      <Filter>Script\Monster\Deuxiemie\Gun\State</Filter>
+    </ClInclude>
+    <ClInclude Include="CWalk_Gun.h">
+      <Filter>Script\Monster\Deuxiemie\Gun\State</Filter>
+    </ClInclude>
+    <ClInclude Include="CObjectManager.h">
+      <Filter>Script\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="CScriptMgr.h">
+      <Filter>Script\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="CSceneSaveLoad.h">
+      <Filter>Script\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraMoveScript.h">
+      <Filter>Script\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="MissileScript.h">
+      <Filter>Script\MIssile</Filter>
+    </ClInclude>
+    <ClInclude Include="MagmaScript.h" />
+    <ClInclude Include="SwordTrailScript.h" />
+    <ClInclude Include="ColumnFlameScript.h">
+      <Filter>Script\Boss\Jug\Attack</Filter>
+    </ClInclude>
+    <ClInclude Include="Jug_Fly.h">
+      <Filter>Script\Boss\Jug\Jug\state</Filter>
+    </ClInclude>
+    <ClInclude Include="Deux_Attack.h">
+      <Filter>Script\Monster\Deuxiemie</Filter>
+    </ClInclude>
+    <ClInclude Include="Deux_Die.h">
+      <Filter>Script\Monster\Deuxiemie</Filter>
+    </ClInclude>
+    <ClInclude Include="Deux_Hit.h">
+      <Filter>Script\Monster\Deuxiemie</Filter>
+    </ClInclude>
+    <ClInclude Include="Deux_Idle.h">
+      <Filter>Script\Monster\Deuxiemie</Filter>
+    </ClInclude>
+    <ClInclude Include="Deux_Walk.h">
+      <Filter>Script\Monster\Deuxiemie</Filter>
+    </ClInclude>
+    <ClInclude Include="FieldM_StateMgr.h">
+      <Filter>Script\Monster\Mgr&amp;Script</Filter>
+    </ClInclude>
+    <ClInclude Include="FieldMonsteScript.h">
+      <Filter>Script\Monster\Mgr&amp;Script</Filter>
+    </ClInclude>
+    <ClInclude Include="Homon_Attack.h">
+      <Filter>Script\Monster\Homonculus</Filter>
+    </ClInclude>
+    <ClInclude Include="Homon_Die.h">
+      <Filter>Script\Monster\Homonculus</Filter>
+    </ClInclude>
+    <ClInclude Include="Homon_Hit.h">
+      <Filter>Script\Monster\Homonculus</Filter>
+    </ClInclude>
+    <ClInclude Include="Homon_Idle.h">
+      <Filter>Script\Monster\Homonculus</Filter>
+    </ClInclude>
+    <ClInclude Include="Homon_Walk.h">
+      <Filter>Script\Monster\Homonculus</Filter>
+    </ClInclude>
+    <ClInclude Include="SwordTrailScript.h">
+      <Filter>Script\Effect\Trail</Filter>
+    </ClInclude>
+    <ClInclude Include="EffectScript.h">
+      <Filter>Script\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemScript.h">
+      <Filter>Script\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="EnergyBallScript.h">
+      <Filter>Script\Boss\Jug\Attack</Filter>
+    </ClInclude>
+    <ClInclude Include="HammerScript.h">
+      <Filter>Script\Boss\Jug\Attack</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenuScript.h">
+      <Filter>Script\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerCamScript.h">
+      <Filter>Script\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="PaperBurnScript.h">
+      <Filter>Script\Effect\PaperBurn</Filter>
+    </ClInclude>
+    <ClInclude Include="SocketColliderScript.h">
+      <Filter>Script\SocketCollider</Filter>
+    </ClInclude>
+    <ClInclude Include="DoorScript.h" />
+    <ClInclude Include="ObjMgrState_IDLE.h">
+      <Filter>Script\Common\State</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjMgrState_LOADING.h">
+      <Filter>Script\Common\State</Filter>
+    </ClInclude>
+    <ClInclude Include="CatmullRomSpline.h">
+      <Filter>Utility\CatmullRomSpline</Filter>
+    </ClInclude>
+    <ClInclude Include="CinemaCamScript.h">
+      <Filter>Script\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="M_AttackScript.h" />
+    <ClInclude Include="PotScript.h">
+      <Filter>Script\Boss\Jug\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="TotemScript.h">
+      <Filter>Script\Boss\Jug\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="MagmaScript.h">
+      <Filter>Script\Boss\Jug\Attack</Filter>
+    </ClInclude>
+    <ClInclude Include="Phase01TriggerScript.h">
+      <Filter>Script\Boss\Jug\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraShakeScript.h" />
+    <ClInclude Include="CObjectMgrState_CutScene.h">
+      <Filter>Script\Common\State</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp">
+      <Filter>Default</Filter>
+    </ClCompile>
+    <ClCompile Include="CStateMgr.cpp">
+      <Filter>Script\Player\StateMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerScript.cpp">
+      <Filter>Script\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="CObjKeyMgr.cpp">
+      <Filter>Script\Player\Key</Filter>
+    </ClCompile>
+    <ClCompile Include="BossJugCombatMgrScript.cpp">
+      <Filter>Script\Boss\Jug\CombatMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="BossJugHandScript.cpp">
+      <Filter>Script\Boss\Jug\Hand</Filter>
+    </ClCompile>
+    <ClCompile Include="BossJugScript.cpp">
+      <Filter>Script\Boss\Jug\Jug</Filter>
+    </ClCompile>
+    <ClCompile Include="JugPhase_None.cpp">
+      <Filter>Script\Boss\Jug\CombatMgr\state</Filter>
+    </ClCompile>
+    <ClCompile Include="JugPhase_Intro.cpp">
+      <Filter>Script\Boss\Jug\CombatMgr\state</Filter>
+    </ClCompile>
+    <ClCompile Include="JugPhase_1.cpp">
+      <Filter>Script\Boss\Jug\CombatMgr\state</Filter>
+    </ClCompile>
+    <ClCompile Include="JugPhase_2.cpp">
+      <Filter>Script\Boss\Jug\CombatMgr\state</Filter>
+    </ClCompile>
+    <ClCompile Include="JugPhase_Dead.cpp">
+      <Filter>Script\Boss\Jug\CombatMgr\state</Filter>
+    </ClCompile>
+    <ClCompile Include="JugHand_Attack.cpp">
+      <Filter>Script\Boss\Jug\Hand\state</Filter>
+    </ClCompile>
+    <ClCompile Include="JugHand_Gen.cpp">
+      <Filter>Script\Boss\Jug\Hand\state</Filter>
+    </ClCompile>
+    <ClCompile Include="JugHand_Idle.cpp">
+      <Filter>Script\Boss\Jug\Hand\state</Filter>
+    </ClCompile>
+    <ClCompile Include="JugHand_None.cpp">
+      <Filter>Script\Boss\Jug\Hand\state</Filter>
+    </ClCompile>
+    <ClCompile Include="JugHand_Vanish.cpp">
+      <Filter>Script\Boss\Jug\Hand\state</Filter>
+    </ClCompile>
+    <ClCompile Include="Jug_Attack_0.cpp">
+      <Filter>Script\Boss\Jug\Jug\state</Filter>
+    </ClCompile>
+    <ClCompile Include="Jug_Attack_1.cpp">
+      <Filter>Script\Boss\Jug\Jug\state</Filter>
+    </ClCompile>
+    <ClCompile Include="Jug_Dead.cpp">
+      <Filter>Script\Boss\Jug\Jug\state</Filter>
+    </ClCompile>
+    <ClCompile Include="Jug_Hammer_Hit.cpp">
+      <Filter>Script\Boss\Jug\Jug\state</Filter>
+    </ClCompile>
+    <ClCompile Include="Jug_Hammer_Idle.cpp">
+      <Filter>Script\Boss\Jug\Jug\state</Filter>
+    </ClCompile>
+    <ClCompile Include="Jug_Intro.cpp">
+      <Filter>Script\Boss\Jug\Jug\state</Filter>
+    </ClCompile>
+    <ClCompile Include="Jug_None.cpp">
+      <Filter>Script\Boss\Jug\Jug\state</Filter>
+    </ClCompile>
+    <ClCompile Include="Jug_Norm_Hit.cpp">
+      <Filter>Script\Boss\Jug\Jug\state</Filter>
+    </ClCompile>
+    <ClCompile Include="Jug_Norm_Idle.cpp">
+      <Filter>Script\Boss\Jug\Jug\state</Filter>
+    </ClCompile>
+    <ClCompile Include="Jug_SpawnHammer.cpp">
+      <Filter>Script\Boss\Jug\Jug\state</Filter>
+    </ClCompile>
+    <ClCompile Include="Jug_WalkGround.cpp">
+      <Filter>Script\Boss\Jug\Jug\state</Filter>
+    </ClCompile>
+    <ClCompile Include="CPlayerStat.cpp">
+      <Filter>Script\Player\Stat</Filter>
+    </ClCompile>
+    <ClCompile Include="CPlayerDieState.cpp">
+      <Filter>Script\Player\State\Die</Filter>
+    </ClCompile>
+    <ClCompile Include="CPlayerHitState.cpp">
+      <Filter>Script\Player\State\Hit</Filter>
+    </ClCompile>
+    <ClCompile Include="CPlayerHeavyAttackState.cpp">
+      <Filter>Script\Player\State\HeavyAttack</Filter>
+    </ClCompile>
+    <ClCompile Include="CPlayerLightAttackState.cpp">
+      <Filter>Script\Player\State\LightAttack</Filter>
+    </ClCompile>
+    <ClCompile Include="CPlayerJumpState.cpp">
+      <Filter>Script\Player\State\Jump</Filter>
+    </ClCompile>
+    <ClCompile Include="CPlayerParryState.cpp">
+      <Filter>Script\Player\State\Parry</Filter>
+    </ClCompile>
+    <ClCompile Include="CPlayerSprintState.cpp">
+      <Filter>Script\Player\State\Sprint</Filter>
+    </ClCompile>
+    <ClCompile Include="CPlayerIdleState.cpp">
+      <Filter>Script\Player\State\Idle</Filter>
+    </ClCompile>
+    <ClCompile Include="CPlayerMoveState.cpp">
+      <Filter>Script\Player\State\Move</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterGunScript.cpp">
+      <Filter>Script\Monster\Deuxiemie\Gun</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterSwordScript.cpp">
+      <Filter>Script\Monster\Deuxiemie\Sword</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterShieldScript.cpp">
+      <Filter>Script\Monster\Deuxiemie\Shield</Filter>
+    </ClCompile>
+    <ClCompile Include="HandStateMgrScript.cpp">
+      <Filter>Script\Boss\Jug\Hand\HandStateMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="CTranslateMgr.cpp">
+      <Filter>Script\Player\TranslateMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="TrailScript.cpp">
+      <Filter>Script\Effect\Trail</Filter>
+    </ClCompile>
+    <ClCompile Include="DestroyScript.cpp">
+      <Filter>Script\Effect\Destroy</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterSearchScript.cpp">
+      <Filter>Script\Monster\Deuxiemie\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="CAttack_Gun.cpp">
+      <Filter>Script\Monster\Deuxiemie\Gun\State</Filter>
+    </ClCompile>
+    <ClCompile Include="CDeath_Gun.cpp">
+      <Filter>Script\Monster\Deuxiemie\Gun\State</Filter>
+    </ClCompile>
+    <ClCompile Include="CIdle_Gun.cpp">
+      <Filter>Script\Monster\Deuxiemie\Gun\State</Filter>
+    </ClCompile>
+    <ClCompile Include="CRun_Gun.cpp">
+      <Filter>Script\Monster\Deuxiemie\Gun\State</Filter>
+    </ClCompile>
+    <ClCompile Include="CStun_Gun.cpp">
+      <Filter>Script\Monster\Deuxiemie\Gun\State</Filter>
+    </ClCompile>
+    <ClCompile Include="CWalk_Gun.cpp">
+      <Filter>Script\Monster\Deuxiemie\Gun\State</Filter>
+    </ClCompile>
+    <ClCompile Include="CObjectManager.cpp">
+      <Filter>Script\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="CSceneSaveLoad.cpp">
+      <Filter>Script\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="CScriptMgr.cpp">
+      <Filter>Script\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraMoveScript.cpp">
+      <Filter>Script\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="MissileScript.cpp">
+      <Filter>Script\MIssile</Filter>
+    </ClCompile>
+    <ClCompile Include="MagmaScript.cpp" />
+    <ClCompile Include="SwordTrailScript.cpp" />
+    <ClCompile Include="ColumnFlameScript.cpp">
+      <Filter>Script\Boss\Jug\Attack</Filter>
+    </ClCompile>
+    <ClCompile Include="Jug_Fly.cpp">
+      <Filter>Script\Boss\Jug\Jug\state</Filter>
+    </ClCompile>
+    <ClCompile Include="Deux_Attack.cpp">
+      <Filter>Script\Monster\Deuxiemie</Filter>
+    </ClCompile>
+    <ClCompile Include="Deux_Die.cpp">
+      <Filter>Script\Monster\Deuxiemie</Filter>
+    </ClCompile>
+    <ClCompile Include="Deux_Hit.cpp">
+      <Filter>Script\Monster\Deuxiemie</Filter>
+    </ClCompile>
+    <ClCompile Include="Deux_Idle.cpp">
+      <Filter>Script\Monster\Deuxiemie</Filter>
+    </ClCompile>
+    <ClCompile Include="Deux_Walk.cpp">
+      <Filter>Script\Monster\Deuxiemie</Filter>
+    </ClCompile>
+    <ClCompile Include="FieldM_StateMgr.cpp">
+      <Filter>Script\Monster\Mgr&amp;Script</Filter>
+    </ClCompile>
+    <ClCompile Include="FieldMonsteScript.cpp">
+      <Filter>Script\Monster\Mgr&amp;Script</Filter>
+    </ClCompile>
+    <ClCompile Include="Homon_Attack.cpp">
+      <Filter>Script\Monster\Homonculus</Filter>
+    </ClCompile>
+    <ClCompile Include="Homon_Die.cpp">
+      <Filter>Script\Monster\Homonculus</Filter>
+    </ClCompile>
+    <ClCompile Include="Homon_Hit.cpp">
+      <Filter>Script\Monster\Homonculus</Filter>
+    </ClCompile>
+    <ClCompile Include="Homon_Idle.cpp">
+      <Filter>Script\Monster\Homonculus</Filter>
+    </ClCompile>
+    <ClCompile Include="Homon_Walk.cpp">
+      <Filter>Script\Monster\Homonculus</Filter>
+    </ClCompile>
+    <ClCompile Include="SwordTrailScript.cpp">
+      <Filter>Script\Effect\Trail</Filter>
+    </ClCompile>
+    <ClCompile Include="EffectScript.cpp">
+      <Filter>Script\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemScript.cpp">
+      <Filter>Script\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="EnergyBallScript.cpp">
+      <Filter>Script\Boss\Jug\Attack</Filter>
+    </ClCompile>
+    <ClCompile Include="HammerScript.cpp">
+      <Filter>Script\Boss\Jug\Attack</Filter>
+    </ClCompile>
+    <ClCompile Include="MainMenuScript.cpp">
+      <Filter>Script\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerCamScript.cpp">
+      <Filter>Script\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="PaperBurnScript.cpp">
+      <Filter>Script\Effect\PaperBurn</Filter>
+    </ClCompile>
+    <ClCompile Include="SocketColliderScript.cpp">
+      <Filter>Script\SocketCollider</Filter>
+    </ClCompile>
+    <ClCompile Include="DoorScript.cpp" />
+    <ClCompile Include="ObjMgrState_IDLE.cpp">
+      <Filter>Script\Common\State</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjMgrState_LOADING.cpp">
+      <Filter>Script\Common\State</Filter>
+    </ClCompile>
+    <ClCompile Include="CatmullRomSpline.cpp">
+      <Filter>Utility\CatmullRomSpline</Filter>
+    </ClCompile>
+    <ClCompile Include="CinemaCamScript.cpp">
+      <Filter>Script\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="M_AttackScript.cpp" />
+    <ClCompile Include="PotScript.cpp">
+      <Filter>Script\Boss\Jug\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="TotemScript.cpp">
+      <Filter>Script\Boss\Jug\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="MagmaScript.cpp">
+      <Filter>Script\Boss\Jug\Attack</Filter>
+    </ClCompile>
+    <ClCompile Include="Phase01TriggerScript.cpp">
+      <Filter>Script\Boss\Jug\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraShakeScript.cpp" />
+    <ClCompile Include="CObjectMgrState_CutScene.cpp">
+      <Filter>Script\Common\State</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Default">
+      <UniqueIdentifier>{5af2d85a-2f9c-4937-9fa8-e14337ba7274}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script">
+      <UniqueIdentifier>{ac27a7a1-23b1-4a47-8b9b-231c2e57487d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Boss">
+      <UniqueIdentifier>{53fc9460-4df9-4b1e-a285-37da32ebcda1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Boss\Jug">
+      <UniqueIdentifier>{d3762b2e-a24d-47b6-879c-56d6a00674fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Boss\Jug\CombatMgr">
+      <UniqueIdentifier>{c267f23d-6f8e-44db-8dbb-807ae5ed80ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Boss\Jug\Hand">
+      <UniqueIdentifier>{6a5fb250-5812-4340-847a-527b38627087}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Boss\Jug\CombatMgr\state">
+      <UniqueIdentifier>{e5e41da3-f1bc-406a-8198-f136c52ef28e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Boss\Jug\Hand\state">
+      <UniqueIdentifier>{6e41c434-acc7-4c08-8781-bbde33541f6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Boss\Jug\Jug">
+      <UniqueIdentifier>{29b1369c-d985-4330-bab8-374ae2d60406}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Boss\Jug\Jug\state">
+      <UniqueIdentifier>{1fefd57c-2ad6-4a89-a999-02b1e3c1b696}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Monster">
+      <UniqueIdentifier>{2a67a331-13fc-4eba-8f3c-5cfe045c0eef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Monster\Deuxiemie">
+      <UniqueIdentifier>{2594bd1e-e7e1-4a89-bf1f-c1d64231aec8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Monster\Deuxiemie\Gun">
+      <UniqueIdentifier>{8d60192d-238a-4378-84db-d882897fd676}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Monster\Deuxiemie\Sword">
+      <UniqueIdentifier>{529e812c-aa10-4d2d-9c50-80c46db3008c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Monster\Deuxiemie\Shield">
+      <UniqueIdentifier>{02761fa1-6189-48a1-b180-3a46327ce433}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Monster\Deuxiemie\Common">
+      <UniqueIdentifier>{35aa1204-09fe-476c-a0a8-f5bfa919c33a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Boss\Jug\Hand\HandStateMgr">
+      <UniqueIdentifier>{93ad1de1-922e-4937-b2a1-309b864ec508}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Effect">
+      <UniqueIdentifier>{d725a876-d332-48b6-b9cd-faecfa201ca9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Effect\Trail">
+      <UniqueIdentifier>{8cf8b6c6-f1e1-4e56-87fb-c2cceb0191f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Effect\Destroy">
+      <UniqueIdentifier>{326752c6-43ac-4839-ad22-738ed0f8c96b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Player">
+      <UniqueIdentifier>{a23fde27-89ca-4bd4-a600-ab785e942220}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Player\StateMgr">
+      <UniqueIdentifier>{3fd3f55f-b709-475c-84ba-36f283eddc39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Player\Stat">
+      <UniqueIdentifier>{adbeabb8-ceb7-4ae3-a0f5-d145b3bd686e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Player\State">
+      <UniqueIdentifier>{2b8526b3-0109-4729-af73-6a3dfb77008d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Player\State\Idle">
+      <UniqueIdentifier>{289e8701-98ce-4190-947b-08f90258bfb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Player\State\Die">
+      <UniqueIdentifier>{74dd7de0-25d9-4df1-ae10-b7562a7f65c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Player\State\Hit">
+      <UniqueIdentifier>{b6087e97-6558-4ae8-98a6-7b5b14724f8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Player\State\Jump">
+      <UniqueIdentifier>{b5250e9b-8760-423f-9f13-424c1ed9aeab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Player\State\LightAttack">
+      <UniqueIdentifier>{4f14e09f-51bc-482d-90ec-a0e77e5741ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Player\State\HeavyAttack">
+      <UniqueIdentifier>{8a5fe6ea-a8c2-4fe3-affa-977731c52a1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Player\State\Move">
+      <UniqueIdentifier>{042860cf-ee06-4054-a5d9-8e66c3c13022}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Player\State\Parry">
+      <UniqueIdentifier>{4dc25546-9bc2-48c1-9f83-d056abd9ff85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Player\State\Sprint">
+      <UniqueIdentifier>{db1ba327-3a4e-4732-9d5a-a7cd7b7f38c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Player\Key">
+      <UniqueIdentifier>{8c570a7e-35af-46ae-990a-74a631b0f457}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Player\TranslateMgr">
+      <UniqueIdentifier>{d15fcce5-a6b4-43fd-a810-0d52cb7930a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Monster\Deuxiemie\Gun\State">
+      <UniqueIdentifier>{f8d06787-344a-49fc-990e-8eae685aca1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Monster\Deuxiemie\Shield\State">
+      <UniqueIdentifier>{4465e97f-0f36-4a52-ab4c-db879ad060cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Monster\Deuxiemie\Sword\State">
+      <UniqueIdentifier>{a86e006f-8aca-46a3-988e-c7dce158af6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Common">
+      <UniqueIdentifier>{9f8f4ddc-f144-4954-9e7a-80b22286feed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Camera">
+      <UniqueIdentifier>{26ff9c4b-bb46-4786-aa05-4d7222b78d33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\MIssile">
+      <UniqueIdentifier>{d12f4513-b60f-40b5-a81e-c7bbd4b7869a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Boss\Jug\Attack">
+      <UniqueIdentifier>{3744aa0a-c8c1-4d78-b805-1d0d7ee56959}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Monster\Homonculus">
+      <UniqueIdentifier>{c886cceb-7e74-4a76-864b-110194d98324}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Monster\Mgr&amp;Script">
+      <UniqueIdentifier>{a2b853d8-75fe-4752-b6e3-7e07dd227d6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Item">
+      <UniqueIdentifier>{0654eaf3-1cda-4915-8068-8c7eded74b80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Effect\PaperBurn">
+      <UniqueIdentifier>{09410adb-860f-484d-b53b-d31774dd162a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\SocketCollider">
+      <UniqueIdentifier>{804c38d3-c8fa-4d60-9bf2-fa92f72e2c40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Common\State">
+      <UniqueIdentifier>{3773dd1a-6e0c-409a-8990-e5c6d3b978ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\UI">
+      <UniqueIdentifier>{4916282a-a8a1-45e1-8d0f-8b7125a19c0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{37e0e695-0561-440f-adb3-ddd11a227367}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility\CatmullRomSpline">
+      <UniqueIdentifier>{da2b6be9-5177-4704-99f2-2d7e412c4031}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Boss\Jug\Object">
+      <UniqueIdentifier>{ac4ee31c-31a1-41c3-a038-37c549156289}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
